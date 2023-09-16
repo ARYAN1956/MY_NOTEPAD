@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3c0df;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.notepad {
+    background-color: #f9dff5;
+    border-radius: 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); /* Added box shadow for depth */
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: 60px;
+    transform: translateZ(0); /* Trigger hardware acceleration for smoother transition */
+    transition: transform 0.3s ease; /* Add a subtle hover effect */
+}
+
+.notepad:hover {
+    transform: translateZ(10px); /* Lift the notepad on hover */
+}
+
+.notepad-header {
+    background-color: #e71cc1;
+    color: #191515;
+    padding: 20px;
+    text-align: center;
+}
+
+.notepad h1 {
+    margin: 0;
+}
+
+.notepad-content {
+    padding: 20px;
+    min-height: 350px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.notepad-content::placeholder {
+    color: #888;
+}
+
+.notepad-content:focus::placeholder {
+    color: transparent;
+}
